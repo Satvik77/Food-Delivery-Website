@@ -14,5 +14,5 @@ On Clicking Place Order Button, We get Order Summary as :
 ![image](https://github.com/Satvik77/Food-Delivery-Website/assets/83899207/cc00beea-22d8-4db7-9ba9-001013b15fd0)
 
 ## Step-4
-We can Print Bill by Print Button
+We can Print Bill
 ![image](https://github.com/Satvik77/Food-Delivery-Website/assets/83899207/f1bf36e9-eab8-41ca-84fa-10613747dd74)
