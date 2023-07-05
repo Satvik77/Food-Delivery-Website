@@ -4,3 +4,5 @@ It is a responsive food delivery form using HTML,CSS and JavaScript
 ## Step-1
 ![image](https://github.com/Satvik77/Food-Delivery-Website/assets/83899207/893a7977-2119-4761-a459-594bfa0537db)
 ## Step-2
+![image](https://github.com/Satvik77/Food-Delivery-Website/assets/83899207/81587702-d51d-4e53-8936-bf24800fdbbe)
+
