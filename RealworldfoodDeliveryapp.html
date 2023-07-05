@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            tr{
+                background-color:maroon;
+                color:wheat;
+                text-align:center;
+            }
+            dt{
+                font-weight: bold;
+                background-color: maroon;
+                color:white;
+            }
+        </style>
+        <script>
+            function placeOrder()
+            {
+                document.getElementById("order summary").style.display="block";
+                
+                Uname=document.getElementById("txtName");
+                mobile=document.getElementById("txtMobile");
+                Address=document.getElementById("txtAddress");
+                burger=document.getElementById("optBurger");
+                roller=document.getElementById("optRoller");
+                fries=document.getElementById("optfries");
+                Lassi=document.getElementById("optLassi");
+
+                var mcost=0;
+                var acost=0;
+                var mname=" ";
+                var aname=" ";
+                if(burger.checked){
+                    mcost=120;
+                    mname=burger.value;
+                }
+                if(roller.checked){
+                    mcost=100;
+                    mname=roller.value;
+                }
+                if(Lassi.checked)
+                {
+                    acost=40;
+                    mcost+=acost;
+                    aname +=Lassi.value + "<br>";
+                }
+                if(fries.checked)
+                {
+                    acost=60;
+                    mcost+=acost;
+                    aname += fries.value + "<br>";
+                }
+                document.getElementById("lblName").innerHTML=Uname.value;
+                document.getElementById("lblMobile").innerHTML=mobile.value;
+                document.getElementById("lblAddress").innerHTML=Address.value;
+                document.getElementById("lblMeal").innerHTML=mname;
+                document.getElementById("lblAdd").innerHTML=aname;
+                document.getElementById("lblAmount").innerHTML=mcost;
+            }
+        </script>
+    
+    
+    </head>
+    <body>
+       <div>
+            <font size = "6">
+                <table width="800" border="2" cellspacing="4" cellpadding="4" align="center" id="orderform">
+                    <tr>
+                        <td colspan="2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfHr7ANTvmM6d43SMKjSjPbrr6UPvsHbtUHg&usqp=CAU" width="800" height="300">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Customer Details</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Name</td>
+                        <td><input type = "text" id="txtName"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td><input type="text"id="txtMobile"></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><input type="text"id="txtAddress"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Select A Meal</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://c.ndtvimg.com/2022-06/gp4k2jro_burgers_625x300_20_June_22.jpg?im=FeatureCrop,algorithm=dnn,width=620,height=350?im=FaceCrop,algorithm=dnn,width=1200,height=886" width="100" height="100">
+                                <br>
+                                <input type ="radio" name="meal" id="optBurger" value="omgBurger">omgBurger(&#8377;120/-)
+                        </td>
+                        <td>
+                            <img src="https://myfoodstory.com/wp-content/uploads/2022/06/Veg-Spring-Rolls-3.jpg" width="100" height="100">
+                            <br>
+                            <input type="radio" name="meal" id="optRoller" value="omgRoller">omgRoller(&#8377;100/-)
+                        </td>    
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Select Ad-on's
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfkWfwAg3qNAP9Z6qi-IKYwAv4g4fLk3EMjg&usqp=CAU" width="100" height="100" >
+                                <br>
+                                <input type="checkbox" id="optfries" value="LargeFries">LargeFries(&#8377;60/-);
+                        </td>
+                        <td>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQlIz_DnMJ-5w_dErD9gNV_khWZuLHU3q0w&usqp=CAU" width="100" height="100">
+                            <br>
+                            <input type="radio" name="meal" id="optLassi" value="omgLassi">omgLassi(&#8377;40/-)
+                        </td>    
+                        
+                    </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="place order" onclick="placeOrder()">
+                            </td>
+                        </tr>
+                    </tr>
+
+                </table>
+                <br>
+                <dl id="order summary" style="display:none;">
+                    <h2>Order Summary</h2>
+                    <dt>Customer Name</dt>
+                    <dd id="lblName"></dd>
+                    <dt>Mobile</dt>
+                    <dd id="lblMobile"></dd>
+                    <dt>Address</dt>
+                    <dd id="lblAddress"></dd>
+                    <dt>Meal</dt>
+                    <dd id="lblMeal"></dd>
+                    <dt>AD-on's</dt>
+                    <dd id="lblAdd"></dd>
+                    <dt>Total Bill Amount</dt>
+                    <dd id="lblAmount"></dd>
+                    <br>
+                    <input type="button" value="print Bill" onclick="window.print()">
+
+                
+       </div>
+     </body>
+</html>    
